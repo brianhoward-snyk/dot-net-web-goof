@@ -21,7 +21,7 @@ namespace OWASP.WebGoat.NET
             {
                 try
                 {
-                    string filename = Path.GetFileName(FileUpload1.FileName);
+                    string filename = Path.GetFileName(FileUpload1.FileName); //triggering snyk code test again
                     FileUpload1.SaveAs(Server.MapPath("~/WebGoatCoins/uploads/") + filename); //triggering snyk
                     labelUpload.Text = "<div class='success' style='text-align:center'>The file " + FileUpload1.FileName + " has been saved in to the WebGoatCoins/uploads directory</div>";
                     
